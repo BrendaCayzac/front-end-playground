@@ -71,6 +71,16 @@
 					Text <br/> effects
 				</a>
 			</div>
+			<!-- dummy -->
+			<div class="nav dummy-1 diamond">
+			</div>
+			<!-- Social Media -->
+			<div class="social nav-8 diamond">
+				<a href="https://www.behance.net/brendacayzeb7a">
+					<i class="fa-brands fa-behance" aria-hidden="true"></i>
+					Behance
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -83,8 +93,10 @@
 		$("#menu").click(function (){
 			if ($(".nav").hasClass("small")){
 				$(".nav").removeClass("small");
+				$(".social").removeClass("small");
 			} else{
 				$(".nav").addClass("small");
+				$(".social").addClass("small");
 			}
 		});
 	});
