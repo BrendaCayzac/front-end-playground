@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="styles/normalize.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- Custom-->
+	<link rel="stylesheet" href="styles/index.css">
+	<title>Document</title>
+</head>
+<body>
+<div class="container">
+	<div class="center">
+		<div class="wrapper">
+			<div id="menu">
+				<h1> What would like to see?</h1>
+			</div>
+			<div class="nav nav1 diamond small">
+				<a href="#">
+					<i class="fa-solid fa-hand-pointer" aria-hidden="true"></i>
+					Buttons
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+        crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function (){
+		$("#menu").click(function (){
+			if ($(".nav").hasClass("small")){
+				$(".nav").removeClass("small");
+			} else{
+				$(".nav").addClass("small");
+			}
+		});
+	});
+
+</script>
+</body>
+</html>
