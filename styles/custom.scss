@@ -1,7 +1,14 @@
-$font:'Roboto', sans-serif;
+$font: "Roboto", sans-serif;
 
 $white: #EEEEEE;
 $black: #202020;
+
+//Colors
+$yellow: #FFC857;
+$red: #FE6D73;
+$lavender: #DADFF7;
+$blue: #6874E8;
+$green: #17C3B2;
 
 /* MEDIA BREAKPOINTS */
 
@@ -9,4 +16,4 @@ $mobile: 37.5rem; /* 600px */
 $tablet: 48rem; /* 768px */
 $desktop-small: 60rem; /* 960px; */
 $desktop: 80rem; /* 1280px; */
-$desktop-standard: 112.5rem /* 1800px */
+$desktop-standard: 112.5rem/* 1800px */

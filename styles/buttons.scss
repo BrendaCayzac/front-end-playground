@@ -1,0 +1,36 @@
+@import "custom";
+body {
+	background-color: $black;
+	font-family: $font;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1.25rem;
+	padding: 1.5rem 2rem;
+
+	button{
+		background-color: $white;
+		padding: 0.625rem;
+		border: none;
+
+		a{
+			text-decoration: none;
+			color: $black;
+		}
+
+		&:hover, &:focus{
+			outline: none;
+			background-color: $yellow;
+
+		}
+	}
+
+	h1{
+		color: $white;
+		font-size: 3rem;
+		margin: 0;
+	}
+}
