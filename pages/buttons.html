@@ -16,10 +16,83 @@
 </head>
 <body>
 <Header>
-	<button>
-		<a href="../index.html"> Go back</a>
-	</button>
-	<h1>Buttons</h1>
+	<nav>
+		<a role="button" href="../index.html"> Go back</a>
+		<h1>Buttons</h1>
+	</nav>
+	<p> You can click on the buttons to check their code!</p>
 </Header>
+<main>
+	<section class="row-one">
+		<div>
+			<h2>Moving background</h2>
+			<ul>
+				<li>
+					<button
+						onclick="toggleCodepen('row-one')"
+						class="button button-one left-up">Hover
+					                                      Me
+					</button>
+				</li>
+				<li>
+					<button onclick="toggleCodepen('row-one')"
+					        class="button	button-one left-down">Hover Me
+					</button>
+				</li>
+				<li>
+					<button onclick="toggleCodepen('row-one')"
+					        class="button button-one right-down">Hover Me
+					</button>
+				</li>
+				<li>
+					<button onclick="toggleCodepen('row-one')"
+					        class="button button-one right-up">Hover
+					                                           Me
+					</button>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="codepen row-one hidden visually-hidden">
+			<p class="codepen"
+			   data-height="350"
+			   data-default-tab="html,result"
+			   data-slug-hash="qBMeXWO"
+			   data-user="BrendaCayzac"
+			   style="box-sizing: border-box; display: flex; align-items: center;
+		    justify-content: center; border: 2px solid; margin: 1.5rem;
+		    padding: 1em;">
+                 <span>See the Pen <a href="https://codepen.io/BrendaCayzac/pen/qBMeXWO">
+	                Moving background buttons
+                    </a> by Bcayz (<a href="https://codepen.io/BrendaCayzac">@BrendaCayzac</a>) on <a
+	                 href="https://codepen.io">CodePen</a>.
+                </span>
+			</p>
+		</div>
+	
+	</section>
+</main>
+
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script>
+	toggleCodepen = (name) => {
+		const codepen = document.querySelector(".codepen." + name);
+		if (codepen.classList.contains("hidden")){
+			codepen.classList.toggle("hidden");
+			setTimeout(() => {
+				codepen.classList.remove("visually-hidden");
+			}, 20);
+		} else{
+			codepen.classList.add("visually-hidden");
+			codepen.addEventListener("transitionend", () => {
+				codepen.classList.toggle("hidden");
+			}, {
+				capture: false,
+				once: true,
+				passive: false,
+			});
+		}
+	};
+</script>
 </body>
 </html>
