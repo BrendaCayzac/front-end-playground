@@ -250,4 +250,185 @@ main section .codepen.visually-hidden {
   transform: translateX(-50%) translateY(-65%);
 }
 
+/* Glitch */
+.glitch, .glitch:after {
+  outline: none;
+  position: relative;
+  font-size: 1.2rem;
+  border: none;
+  color: #EEEEEE;
+  padding: 1.5rem;
+  background: #6874E8;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.glitch:after {
+  --line-0: inset(50% 50% 50% 50%);
+  --line-1: inset(80% -0.65rem 0 0);
+  --line-2: inset(50% -0.65rem 30% 0);
+  --line-3: inset(10% -0.65rem 85% 0);
+  --line-4: inset(40% -0.65rem 43% 0);
+  --line-5: inset(80% -0.65rem 5% 0);
+  position: absolute;
+  content: "SECRET TEXT";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0, transparent 3%, #17C3B2 3%, #17C3B2 5%, #FE6D73 5%);
+  text-shadow: -3px -3px 0 #FFC857, 3px 3px 0 #17C3B2;
+  clip-path: var(--line-0);
+}
+.glitch:hover:after, .glitch:focus:after {
+  animation: 1s glitching;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitching {
+  0% {
+    clip-path: var(--line-1);
+    transform: translate(-1.25rem, -0.625rem);
+  }
+  10% {
+    clip-path: var(--line-3);
+    transform: translate(0.625rem, 0.625rem);
+  }
+  20% {
+    clip-path: var(--line-1);
+    transform: translate(-0.625rem, 0.625rem);
+  }
+  30% {
+    clip-path: var(--line-3);
+    transform: translate(0, 0.313rem);
+  }
+  40% {
+    clip-path: var(--line-2);
+    transform: translate(0.313rem, 0);
+  }
+  50% {
+    clip-path: var(--line-3);
+    transform: translate(0.313rem, 0);
+  }
+  60% {
+    clip-path: var(--line-4);
+    transform: translate(0.313rem, 0.625rem);
+  }
+  70% {
+    clip-path: var(--line-2);
+    transform: translate(-0.625rem, 0.625rem);
+  }
+  80% {
+    clip-path: var(--line-5);
+    transform: translate(1.25rem, -0.625rem);
+  }
+  90% {
+    clip-path: var(--line-1);
+    transform: translate(-0.625rem, 0);
+  }
+  100% {
+    clip-path: var(--line-1);
+    transform: translate(0);
+  }
+}
+/* Slide in */
+.slide-in {
+  padding: 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #E6894E;
+  background: linear-gradient(to bottom left, #E6894E 50%, transparent 50.1%) top right no-repeat, linear-gradient(to top right, #E6894E 50%, transparent 50.1%) bottom left no-repeat;
+  background-size: 1.4695rem 1.4695rem;
+  box-shadow: 0 0 0 100px inset var(--s, rgba(34, 0, 34, 0)), 0 0 0 0.313rem inset #E6894E;
+  clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 1rem 100%, 0 calc(100% - 1rem));
+  transition: color var(--t, 0.3s), background-size 0.3s;
+}
+.slide-in:focus-visible {
+  outline-offset: -0.313rem;
+  outline: 5px solid #202020;
+  clip-path: none;
+  background-size: 0 0;
+}
+.slide-in:hover, .slide-in:focus, .slide-in:active {
+  background-size: 100% 100%;
+  color: #EEEEEE;
+  --t: 0.2s 0.1s;
+}
+.slide-in button:active {
+  --s: $black;
+  transition: none;
+}
+
+/* Repeating text */
+.endless {
+  position: relative;
+  display: inline-block;
+  background: #17C3B2;
+  color: #EEEEEE;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 1.5rem;
+  font-weight: 700;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.endless:before, .endless:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.endless span {
+  display: inline-block;
+}
+.endless:hover > span, .endless:focus > span {
+  opacity: 0;
+}
+.endless .repeat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.endless .repeat-inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  --move-initial: calc(-25% + 1rem);
+  --move-final: calc(-50% + 1rem);
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: repeater 0.85s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
+}
+.endless:hover .repeat-inner, .endless:focus .repeat-inner {
+  animation-play-state: running;
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+.endless .repeat span {
+  text-align: center;
+  white-space: nowrap;
+  font-style: italic;
+  padding: 1.5rem 0.65rem;
+  font-weight: 400;
+}
+
+@keyframes repeater {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
 /*# sourceMappingURL=buttons.css.map */

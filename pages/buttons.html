@@ -29,23 +29,23 @@
 			<ul>
 				<li>
 					<button
-						onclick="toggleCodepen('row-one')"
+						onclick="toggleCodepen('row-one',false)"
 						class="button button-one left-up">Hover
 					                                      Me
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-one')"
+					<button onclick="toggleCodepen('row-one',false)"
 					        class="button	button-one left-down">Hover Me
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-one')"
+					<button onclick="toggleCodepen('row-one',false)"
 					        class="button button-one right-down">Hover Me
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-one')"
+					<button onclick="toggleCodepen('row-one',false)"
 					        class="button button-one right-up">Hover
 					                                           Me
 					</button>
@@ -77,26 +77,29 @@
 			<h2>Second message</h2>
 			<ul>
 				<li>
-					<button onclick="toggleCodepen('row-two')" class="left">
-						<span class="text">Hover me</span>
+					<button onclick="toggleCodepen('row-two', false)"
+					        class="left">
+						<span>Hover me</span>
 						<span>Hey!</span>
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-two')" class="up">
-						<span class="text">Hover me</span>
+					<button onclick="toggleCodepen('row-two',false)" class="up">
+						<span>Hover me</span>
 						<span>Hello!</span>
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-two')" class="right">
-						<span class="text">Hover me</span>
+					<button onclick="toggleCodepen('row-two',false)"
+					        class="right">
+						<span>Hover me</span>
 						<span>S'up!</span>
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('row-two')" class="down">
-						<span class="text">Hover me</span>
+					<button onclick="toggleCodepen('row-two',false)"
+					        class="down">
+						<span>Hover me</span>
 						<span>Howdy!</span>
 					</button>
 				</li>
@@ -119,19 +122,100 @@
 		                 href="https://codepen.io">CodePen</a>.</span>
 			</p>
 		</div>
+	</section>
 	
+	<section class="row-three">
+		<div>
+			<h2>Miscellaneous</h2>
+			<ul>
+				<li>
+					<button onclick="toggleCodepen('glitch-pen',true,'three')"
+					        class="glitch">
+						Glitch
+					</button>
+				</li>
+				<li>
+					<button onclick="toggleCodepen('slide-in-pen', true,'three')"
+					        class="slide-in">
+						Slide in
+					</button>
+				</li>
+				<li>
+					<button onclick="toggleCodepen('endless-pen', true,'three')"
+					        class="endless">
+						<span>Repeat</span>
+						<div class="repeat" aria-hidden="true">
+							<div class="repeat-inner">
+								<span>Super cool</span>
+								<span>Super cool</span>
+								<span>Super cool</span>
+								<span>Super cool</span>
+							</div>
+						</div>
+					</button>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="codepen row-three glitch-pen hidden visually-hidden">
+			<p class="codepen"
+			   data-height="300"
+			   data-default-tab="html,result"
+			   data-slug-hash="xxywJqE"
+			   data-user="BrendaCayzac"
+			   style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/BrendaCayzac/pen/xxywJqE">
+                Glitching button</a> by Bcayz (<a
+	                href="https://codepen.io/BrendaCayzac">@BrendaCayzac</a>)
+                 on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
+		</div>
+		<div class="codepen row-three slide-in-pen hidden visually-hidden">
+			<p class="codepen"
+			   data-height="300"
+			   data-default-tab="html,result"
+			   data-slug-hash="qBJOyGp"
+			   data-user="BrendaCayzac"
+			   style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/BrendaCayzac/pen/qBJOyGp">
+                Slide in button</a> by Bcayz (<a href="https://codepen.io/BrendaCayzac">@BrendaCayzac</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
+		</div>
+		<div class="codepen row-three endless-pen hidden visually-hidden">
+			<p class="codepen"
+			   data-height="300"
+			   data-default-tab="html,result"
+			   data-slug-hash="NWOGLmd"
+			   data-user="BrendaCayzac"
+			   style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/BrendaCayzac/pen/NWOGLmd">
+                Endless button</a> by Bcayz (<a href="https://codepen.io/BrendaCayzac">@BrendaCayzac</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
+		</div>
 	</section>
 </main>
 
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 <script>
-	toggleCodepen = (name) => {
+	toggleCodepen = (name, hideOthers, row = "") => {
 		const codepen = document.querySelector(".codepen." + name);
+		
 		if (codepen.classList.contains("hidden")){
 			codepen.classList.toggle("hidden");
 			setTimeout(() => {
 				codepen.classList.remove("visually-hidden");
 			}, 20);
+			
+			if (hideOthers){
+				const otherCodepens =
+					document.querySelectorAll("div.codepen.row-" + row + ":not(." + name + ")");
+				otherCodepens.forEach(element => {
+					element.classList.add("visually-hidden");
+					element.classList.add("hidden");
+				});
+			}
 		} else{
 			codepen.classList.add("visually-hidden");
 			codepen.addEventListener("transitionend", () => {
@@ -142,6 +226,7 @@
 				passive: false,
 			});
 		}
+		
 	};
 </script>
 </body>
