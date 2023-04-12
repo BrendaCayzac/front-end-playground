@@ -138,4 +138,116 @@ main section .codepen.row-one.visually-hidden {
   background-color: #FE6D73;
 }
 
+.row-two button {
+  outline: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #EEEEEE;
+  color: #EEEEEE;
+  padding: 1.125rem;
+  cursor: pointer;
+  background: #202020;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.row-two button span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 1;
+}
+.row-two button span:last-child {
+  color: #EEEEEE;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 3;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  height: 1rem;
+}
+.row-two button:after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  z-index: 2;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.row-two button:hover span:last-child, .row-two button:focus span:last-child {
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+.row-two .left span:last-child {
+  transform: translate(-250%, -50%);
+}
+.row-two .left:after {
+  background-color: #17C3B2;
+  left: -50%;
+  top: 0;
+  transform: skewX(9.3deg) scaleX(0);
+  transform-origin: left center;
+}
+.row-two .left:hover:after, .row-two .left:focus:after {
+  transform-origin: left center;
+  transform: skewX(9.3deg) scaleX(2);
+}
+.row-two .left:hover span:last-child, .row-two .left:focus span:last-child {
+  transform: translate(-50%, -65%);
+}
+.row-two .up span:last-child {
+  transform: translate(-50%, -425%);
+}
+.row-two .up:after {
+  background-color: #E6894E;
+  top: -50%;
+  left: 0;
+  transform: skewY(9.3deg) scaleY(0);
+  transform-origin: top center;
+}
+.row-two .up:hover:after, .row-two .up:focus:after {
+  transform-origin: top center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+.row-two .up:hover span:last-child, .row-two .up:focus span:last-child {
+  transform: translateX(-50%) translateY(-65%);
+}
+.row-two .right span:last-child {
+  transform: translate(250%, -50%);
+}
+.row-two .right:after {
+  background-color: #6874E8;
+  right: -50%;
+  top: 0;
+  transform: skewX(9.3deg) scaleX(0);
+  transform-origin: right center;
+}
+.row-two .right:hover:after, .row-two .right:focus:after {
+  transform-origin: right center;
+  transform: skewX(9.3deg) scaleX(2);
+}
+.row-two .right:hover span:last-child, .row-two .right:focus span:last-child {
+  transform: translate(-50%, -65%);
+}
+.row-two .down span:last-child {
+  transform: translate(-50%, 225%);
+}
+.row-two .down:after {
+  background-color: #FE6D73;
+  bottom: -50%;
+  left: 0;
+  transform: skewY(9.3deg) scaleY(0);
+  transform-origin: bottom center;
+}
+.row-two .down:hover:after, .row-two .down:focus:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+.row-two .down:hover span:last-child, .row-two .down:focus span:last-child {
+  transform: translateX(-50%) translateY(-65%);
+}
+
 /*# sourceMappingURL=buttons.css.map */

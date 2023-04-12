@@ -96,7 +96,6 @@ main {
 }
 
 // Row 1
-
 .codepen .row-one{
 	display: none;
 }
@@ -152,3 +151,152 @@ main {
 	left: 0.625rem;
 	background-color: $red;
 }
+
+// Row 2
+.row-two{
+	 button {
+		outline: none;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		border: 2px solid $white;
+		color: $white;
+		padding: 1.125rem;
+		cursor: pointer;
+		background: $black;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+
+		 span:first-child {
+			 position: relative;
+			 transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+			 z-index: 1;
+		 }
+
+		span:last-child {
+			 color: $white;
+			 display: block;
+			 position: absolute;
+			 bottom: 0;
+			 transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+			 z-index: 3;
+			 opacity: 0;
+			 top: 50%;
+			 left: 50%;
+			 height: 1rem;
+		 }
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 110%;
+			height: 100%;
+			z-index: 2;
+			transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+		}
+
+		 &:hover span:last-child, &:focus span:last-child {
+			 opacity: 1;
+			 transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+		 }
+
+	}
+
+	.left {
+		span:last-child {
+			transform: translate(-250%,-50%);
+		}
+
+		&:after {
+			background-color: $green;
+			left: -50%;
+			top: 0;
+			transform: skewX(9.3deg) scaleX(0);
+			transform-origin: left center;
+		}
+
+		&:hover:after, &:focus:after {
+			transform-origin: left center;
+			transform: skewX(9.3deg) scaleX(2);
+		}
+
+		&:hover span:last-child, &:focus span:last-child {
+			transform:translate(-50%,-65%);
+		}
+	}
+
+	.up{
+
+		span:last-child {
+			transform: translate(-50%,-425%);
+		}
+
+		&:after {
+			background-color: $orange;
+			top: -50%;
+			left: 0;
+			transform: skewY(9.3deg) scaleY(0);
+			transform-origin: top center;
+		}
+
+		&:hover:after, &:focus:after {
+			transform-origin: top center;
+			transform: skewY(9.3deg) scaleY(2);
+		}
+
+		&:hover span:last-child, &:focus span:last-child {
+			transform: translateX(-50%) translateY(-65%);
+		}
+	}
+
+	.right{
+		span:last-child {
+			transform: translate(250%,-50%);
+		}
+
+		&:after {
+			background-color: $blue;
+			right: -50%;
+			top: 0;
+			transform: skewX(9.3deg) scaleX(0);
+			transform-origin: right center;
+		}
+
+		&:hover:after, &:focus:after {
+			transform-origin: right center;
+			transform: skewX(9.3deg) scaleX(2);
+		}
+
+		&:hover span:last-child, &:focus span:last-child {
+			transform:translate(-50%,-65%);
+		}
+	}
+
+	.down{
+		span:last-child {
+			transform: translate(-50%,225%);
+		}
+
+		&:after {
+			background-color: $red;
+			bottom: -50%;
+			left: 0;
+			transform: skewY(9.3deg) scaleY(0);
+			transform-origin: bottom center;
+		}
+
+		&:hover:after, &:focus:after {
+			transform-origin: bottom center;
+			transform: skewY(9.3deg) scaleY(2);
+		}
+
+		&:hover span:last-child, &:focus span:last-child {
+			transform: translateX(-50%) translateY(-65%);
+		}
+	}
+}
+
+
+
+
