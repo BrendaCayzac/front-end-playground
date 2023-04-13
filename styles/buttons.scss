@@ -758,5 +758,34 @@ main {
 			}
 		}
 	}
+
+	/* Neu-morphism */
+	.neu-morphism {
+		padding: 1.5em;
+		background: $black;
+		border-radius: .5rem;
+		color: $white;
+		transition: .2s ease-in-out;
+		box-shadow: -6px -6px 14px rgba(255, 255, 255, .075),
+		-6px -6px 10px rgba(255, 255, 255, .05),
+		6px 6px 8px rgba(255, 255, 255, .025),
+		6px 6px 10px rgba(0, 0, 0, .7);
+
+		&:hover, &:focus {
+			color: rgba(238, 238, 238, .60);
+			box-shadow: -2px -2px 6px rgba(255, 255, 255, .075),
+			-2px -2px 4px rgba(255, 255, 255, .05),
+			2px 2px 2px rgba(255, 255, 255, .025),
+			2px 2px 4px rgba(0, 0, 0, .7);
+		}
+
+		&:active {
+			color: rgba(254, 109, 115, 1);
+			box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .07),
+			inset -2px -2px 4px rgba(255, 255, 255, .05),
+			inset 2px 2px 2px rgba(255, 255, 255, .025),
+			inset 2px 2px 4px rgba(0, 0, 0, 0.75);
+		}
+	}
 }
 
