@@ -224,13 +224,14 @@
 					</button>
 				</li>
 				<li>
-					<button onclick="toggleCodepen('shake-pen', true,'four')" class="shake">
+					<button onclick="toggleCodepen('shake-pen', true,'four')"
+					        class="shake">
 						<span>Shake</span>
 					</button>
 				</li>
 				<li>
-					<button class="">
-						<span>Repeat</span>
+					<button onclick="toggleCodepen('rotating-letters', true,'four')" class="rotate-letters">
+						<span>Rotate</span>
 					</button>
 				</li>
 				<li>
@@ -265,7 +266,17 @@
                 on <a href="https://codepen.io">CodePen</a>.</span>
 			</p>
 		</div>
-		<div class="codepen row-four hidden visually-hidden">
+		<div class="codepen row-four rotating-letters hidden visually-hidden">
+			<p class="codepen"
+			   data-height="300"
+			   data-default-tab="html,result"
+			   data-slug-hash="rNqxWGQ"
+			   data-user="BrendaCayzac"
+			   style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/BrendaCayzac/pen/rNqxWGQ">
+                Untitled</a> by Bcayz (<a href="https://codepen.io/BrendaCayzac">@BrendaCayzac</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
 		</div>
 		
 		<div class="codepen row-four hidden visually-hidden">
@@ -275,6 +286,8 @@
 
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 <script>
+	
+	<!-- Toggle code pens -->
 	toggleCodepen = (name, hideOthers, row = "") => {
 		const codepen = document.querySelector(".codepen." + name);
 		
@@ -304,6 +317,13 @@
 		}
 		
 	};
+	
+	// 	Rotate button
+	const rotateButton = document.querySelector(".rotate-letters");
+	rotateButton.innerHTML = "<div><span>" +
+	                         rotateButton.textContent.trim()
+	                                     .split("")
+	                                     .join("</span><span>") + "</span></div>";
 </script>
 </body>
 </html>

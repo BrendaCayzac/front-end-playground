@@ -717,5 +717,46 @@ main {
 			transform: translate3d(0, 0, 0) translateZ(0);
 		}
 	}
+
+	/* Rotate */
+	.rotate-letters {
+		--duration: .3s;
+		display: block;
+		background: $blue;
+		color: $white;
+		border-radius: 3.125rem;
+		padding: 1.5rem;
+		line-height:1rem;
+		transform: translateY(0) translateZ(0);
+		transition: transform var(--duration) ease;
+
+		div {
+			display: flex;
+			overflow: hidden;
+			text-shadow: 0 1rem 0 $white;
+
+			span {
+				display: block;
+				backface-visibility: hidden;
+				transition: transform var(--duration) ease;
+				transform: translateY(0) translateZ(0);
+				$i: 1;
+				@while $i < 12 {
+					&:nth-child(#{$i}) {
+						transition-delay: $i / 20 + s;
+					}
+					$i: $i + 1;
+				}
+			}
+		}
+
+		&:hover, &:focus {
+			transform: translateY(-5px);
+
+			span {
+				transform: translateY(calc(1rem * -1)) translateZ(0);
+			}
+		}
+	}
 }
 

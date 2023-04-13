@@ -474,6 +474,7 @@ main section .codepen.visually-hidden {
 .row-four {
   /* Outline */
   /* Shake */
+  /* Rotate */
 }
 .row-four .outline {
   position: relative;
@@ -614,6 +615,67 @@ main section .codepen.visually-hidden {
   100% {
     transform: translate3d(0, 0, 0) translateZ(0);
   }
+}
+.row-four .rotate-letters {
+  --duration: .3s;
+  display: block;
+  background: #6874E8;
+  color: #EEEEEE;
+  border-radius: 3.125rem;
+  padding: 1.5rem;
+  line-height: 1rem;
+  transform: translateY(0) translateZ(0);
+  transition: transform var(--duration) ease;
+}
+.row-four .rotate-letters div {
+  display: flex;
+  overflow: hidden;
+  text-shadow: 0 1rem 0 #EEEEEE;
+}
+.row-four .rotate-letters div span {
+  display: block;
+  backface-visibility: hidden;
+  transition: transform var(--duration) ease;
+  transform: translateY(0) translateZ(0);
+}
+.row-four .rotate-letters div span:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.row-four .rotate-letters div span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.row-four .rotate-letters div span:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.row-four .rotate-letters div span:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.row-four .rotate-letters div span:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.row-four .rotate-letters div span:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.row-four .rotate-letters div span:nth-child(7) {
+  transition-delay: 0.35s;
+}
+.row-four .rotate-letters div span:nth-child(8) {
+  transition-delay: 0.4s;
+}
+.row-four .rotate-letters div span:nth-child(9) {
+  transition-delay: 0.45s;
+}
+.row-four .rotate-letters div span:nth-child(10) {
+  transition-delay: 0.5s;
+}
+.row-four .rotate-letters div span:nth-child(11) {
+  transition-delay: 0.55s;
+}
+.row-four .rotate-letters:hover, .row-four .rotate-letters:focus {
+  transform: translateY(-5px);
+}
+.row-four .rotate-letters:hover span, .row-four .rotate-letters:focus span {
+  transform: translateY(-1rem) translateZ(0);
 }
 
 /*# sourceMappingURL=buttons.css.map */
