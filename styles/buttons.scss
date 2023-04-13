@@ -59,7 +59,7 @@ main {
 		padding: 1.25rem;
 		border: none;
 		font-size: 1.2rem;
-		outline:none;
+		outline: none;
 		cursor: pointer;
 	}
 
@@ -491,7 +491,6 @@ main {
 
 }
 
-
 @keyframes repeater {
 	0% {
 		transform: translate3d(var(--move-initial), 0, 0);
@@ -502,7 +501,6 @@ main {
 	}
 }
 
-
 /* Resize */
 .resize {
 	position: relative;
@@ -512,7 +510,6 @@ main {
 	cursor: pointer;
 	background: none;
 
-
 	&:before,
 	&:after {
 		position: absolute;
@@ -521,29 +518,29 @@ main {
 	}
 
 	&:before {
-		content: '';
+		content: "";
 		background: $red;
 		top: 1px;
 		left: 1px;
-		transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+		transition: transform 0.3s cubic-bezier(0.2, 1, 0.7, 1);
 	}
 
-	&:hover:before, &:focus:before  {
+	&:hover:before, &:focus:before {
 		transform: scale3d(0.85, 0.8, 2);
 	}
 
 	&:after {
-		content: '';
+		content: "";
 		top: 0;
 		left: 0;
 		border: 1px solid $red;
-		transition: transform 0.3s cubic-bezier(0.2,1,0.7,1);
+		transition: transform 0.3s cubic-bezier(0.2, 1, 0.7, 1);
 		border-radius: 0;
 		transform: scale3d(0.85, 0.65, 1);
 	}
 
 	&:hover:after, &:focus:after {
-		transform: scale3d(1,1,1);
+		transform: scale3d(1, 1, 1);
 	}
 
 	span {
@@ -555,7 +552,8 @@ main {
 
 /* Row 4 */
 
-.row-four{
+.row-four {
+	/* Outline */
 	.outline {
 		position: relative;
 		background: transparent;
@@ -570,6 +568,7 @@ main {
 			&:before {
 				animation: lineBefore 1s forwards;
 			}
+
 			&:after {
 				animation: lineAfter 1s forwards;
 			}
@@ -659,6 +658,63 @@ main {
 
 			bottom: calc(100% - 1px);
 			right: 0;
+		}
+	}
+
+	/* Shake */
+	.shake {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.5rem 3rem;
+		border-radius: 3.125rem;
+		opacity: 1;
+		background-color: $orange;
+		color: $white;
+
+		&:hover, &:focus {
+			animation: rotate 0.5s ease-in-out both;
+
+			span {
+				animation: shake 0.5s ease-in-out both;
+				animation-delay: 0.03s;
+			}
+		}
+	}
+
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg) translate3d(0, 0, 0);
+		}
+		25% {
+			transform: rotate(3deg) translate3d(0, 0, 0);
+		}
+		50% {
+			transform: rotate(-3deg) translate3d(0, 0, 0);
+		}
+		75% {
+			transform: rotate(1deg) translate3d(0, 0, 0);
+		}
+		100% {
+			transform: rotate(0deg) translate3d(0, 0, 0);
+		}
+	}
+	@keyframes shake {
+		0% {
+			transform: translate3d(0, 0, 0) translateZ(0);
+		}
+		25% {
+			transform: translate3d(8px, 0, 0) translateZ(0);
+		}
+		50% {
+			transform: translate3d(-6px, 0, 0) translateZ(0);
+		}
+		75% {
+			transform: translate3d(4px, 0, 0) translateZ(0);
+		}
+		100% {
+			transform: translate3d(0, 0, 0) translateZ(0);
 		}
 	}
 }

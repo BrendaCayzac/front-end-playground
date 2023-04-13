@@ -471,6 +471,10 @@ main section .codepen.visually-hidden {
 }
 
 /* Row 4 */
+.row-four {
+  /* Outline */
+  /* Shake */
+}
 .row-four .outline {
   position: relative;
   background: transparent;
@@ -557,6 +561,58 @@ main section .codepen.visually-hidden {
     height: 1px;
     bottom: calc(100% - 1px);
     right: 0;
+  }
+}
+.row-four .shake {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-radius: 3.125rem;
+  opacity: 1;
+  background-color: #E6894E;
+  color: #EEEEEE;
+}
+.row-four .shake:hover, .row-four .shake:focus {
+  animation: rotate 0.5s ease-in-out both;
+}
+.row-four .shake:hover span, .row-four .shake:focus span {
+  animation: shake 0.5s ease-in-out both;
+  animation-delay: 0.03s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(8px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-6px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
   }
 }
 
