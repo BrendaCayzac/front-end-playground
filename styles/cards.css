@@ -1,0 +1,99 @@
+/* MEDIA BREAKPOINTS */
+/* 600px */
+/* 768px */
+/* 960px; */
+/* 1280px; */
+body {
+  background-color: #202020;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 1.5rem 2rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+header nav a {
+  background-color: #EEEEEE;
+  padding: 0.625rem;
+  border: none;
+  text-decoration: none;
+  color: #202020;
+}
+header nav a:hover, header nav a:focus {
+  outline: none;
+  background-color: #FFC857;
+}
+header nav h1 {
+  color: #EEEEEE;
+  font-size: 3rem;
+  margin: 0;
+}
+header p {
+  color: #FFC857;
+  font-weight: 200;
+  padding-left: 6.4rem;
+  margin: 0;
+}
+
+main {
+  padding: 2rem 1.5rem;
+}
+main .codepen-container {
+  width: 100%;
+  height: 100%;
+}
+main .card-one {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: 400px;
+}
+main .card-one figure {
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  margin: 0;
+}
+main .card-one figure * {
+  grid-area: 1/1;
+  transition: 0.3s;
+}
+main .card-one figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .card-one figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: rgba(32, 32, 32, 0.75);
+  color: #EEEEEE;
+  clip-path: inset(0 var(--path, 100%) 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text;
+  margin: -1px;
+}
+main .card-one figure figcaption h1 {
+  margin: 0;
+}
+main .card-one figure:hover figcaption, main .card-one figure:focus figcaption {
+  --path: 0%;
+}
+main .card-one figure:hover figcaption img, main .card-one figure:focus figcaption img {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=cards.css.map */
