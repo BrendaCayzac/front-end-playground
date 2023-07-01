@@ -51,6 +51,7 @@ main {
   /* Code pens*/
   /* Card one */
   /* Card two */
+  /* Card Three */
 }
 main section {
   width: 100%;
@@ -204,6 +205,65 @@ main .card-two figure:hover a {
 main .card-two figure img {
   transform: scale(1);
   transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
+main .card-three .category-card {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  background-color: #EEEEEE;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+main .card-three .category-card .tag {
+  display: inline-block;
+  background-color: #6874E8;
+  color: #EEEEEE;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5em 0.75em;
+  line-height: 1;
+  border-radius: 6px;
+}
+main .card-three .category-card .tag + * {
+  margin-top: 1rem;
+}
+main .card-three .category-card h2 {
+  font-size: 1.5rem;
+  color: #202020;
+  line-height: 1.25;
+}
+main .card-three .category-card h2 + * {
+  margin-top: 1rem;
+}
+main .card-three .category-card p {
+  color: #202020;
+}
+main .card-three .category-card p + * {
+  margin-top: 1.25rem;
+}
+main .card-three .category-card button {
+  font: inherit;
+  line-height: 1;
+  background-color: #EEEEEE;
+  border: 2px solid #6874E8;
+  color: #6874E8;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+main .card-three .category-card button:hover, main .card-three .category-card button:focus {
+  background-color: #6874E8;
+  color: #EEEEEE;
 }
 
 /*# sourceMappingURL=cards.css.map */
