@@ -47,18 +47,30 @@ header {
 
 main {
 	padding: 2rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 3rem;
+	width: 100%;
 
-	.codepen-container {
+	section{
 		width: 100%;
-		height: 100%;
-	}
-
-	.card-one {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		gap: 2rem;
 		height: 400px;
+	}
+
+	/* Code pens*/
+	.codepen-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	/* Card one */
+	.card-one {
 
 		figure {
 			display: grid;
@@ -107,6 +119,134 @@ main {
 						transform: scale(1.2);
 					}
 				}
+			}
+
+		}
+
+	}
+
+	/* Card two */
+
+	.card-two {
+		figure{
+			width: 100%;
+			max-width: 300px;
+			height: 400px;
+			position: relative;
+			overflow: hidden;
+			margin: 0;
+			box-shadow: 0 0 32px -10px rgba($black, 0.08);
+
+			figcaption {
+				width: 100%;
+				text-align: center;
+				background-color: $blue;
+				padding: 0 60px 50px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translateY(0);
+				transition: all 0.35s 0.35s cubic-bezier(.1, .72, .4, .97);
+				will-change: bottom, background-color, transform, padding;
+				z-index: 1;
+				color: $white;
+
+				&::before,
+				&::after {
+					content: "";
+					width: 100%;
+					height: 120px;
+					background-color: inherit;
+					position: absolute;
+					left: 0;
+					z-index: -1;
+				}
+
+				&::before {
+					top: -80px;
+					clip-path: ellipse(60% 80px at bottom center);
+				}
+
+				&::after {
+					bottom: -80px;
+					clip-path: ellipse(60% 80px at top center);
+				}
+
+				h2 {
+					font-size: 1.5rem;
+					margin-bottom: 1em;
+
+					span {
+						color: $yellow;
+					}
+				}
+
+				p {
+					font-size: 0.75rem;
+				}
+
+				a {
+					position: absolute;
+					bottom: 1rem;
+					left: 50%;
+					transform: translate(-50%, 10%);
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					text-decoration: none;
+					color: $yellow;
+					opacity: 0;
+					padding: 10px;
+					transition: all 0.35s;
+
+					&:hover {
+
+						svg {
+							transform: translateX(4px);
+						}
+					}
+
+					svg {
+						width: 18px;
+						margin-left: 4px;
+						transition: transform 0.3s;
+					}
+				}
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				z-index: -1;
+				transform: scale(1.2);
+				transition: 0.35s 0.35s transform cubic-bezier(.1, .72, .4, .97);
+			}
+
+			&:hover {
+
+				figcaption {
+					background-color: $black;
+					bottom: 100%;
+					transform: translateY(100%);
+					padding: 50px 60px;
+					transition: all 0.35s cubic-bezier(.1, .72, .4, .97);
+				}
+
+				a {
+					opacity: 1;
+					transform: translate(-50%, 0);
+					transition: all 0.3s 0.35s cubic-bezier(.1, .72, .4, .97);
+				}
+			}
+
+			img {
+				transform: scale(1);
+				transition: 0.35s 0.1s transform cubic-bezier(.1, .72, .4, .97);
 			}
 
 		}
