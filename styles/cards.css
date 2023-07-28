@@ -55,6 +55,7 @@ main {
   /* Card two */
   /* Card Three */
   /* Card Four */
+  /* Card five */
 }
 main section {
   width: 100%;
@@ -374,6 +375,102 @@ main .card-four .flash-card:hover ::before, main .card-four .flash-card:focus ::
   filter: brightness(0.5);
   top: -100%;
   left: 200%;
+}
+main .card-five {
+  line-height: 1.5;
+}
+main .card-five .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 25rem;
+  height: 25rem;
+  background-color: #EEEEEE;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+main .card-five .card p:last-child {
+  margin: 0;
+}
+main .card-five .card figure {
+  position: relative;
+  max-height: 250px;
+  margin: 0;
+  height: 14.375rem;
+}
+main .card-five .card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .card-five .card figure .price {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 0.25rem;
+  background-color: #C89B3F;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .card-five .card figure .price span {
+  font-size: 12px;
+  margin-top: -2px;
+}
+main .card-five .card figure .price::-webkit-scrollbar {
+  width: 8px;
+}
+main .card-five .card figure .price::-webkit-scrollbar-track {
+  box-shadow: 0;
+  border-radius: 0;
+}
+main .card-five .card figure .price::-webkit-scrollbar-thumb {
+  background: #FFC857;
+  border-radius: 1rem;
+}
+main .card-five .card .content {
+  position: relative;
+  padding: 16px 12px 32px 24px;
+  margin: 16px 8px 8px 0;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+main .card-five .card .content .title {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+main .card-five .card .content .title::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFC857;
+  content: "";
+}
+main .card-five .card .content hr {
+  margin: 24px auto;
+  width: 50px;
+  border-top: 2px solid #FFC857;
+}
+main .card-five .card .content p {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+main .card-five .card .content p:last-child {
+  margin: 0;
 }
 
 /*# sourceMappingURL=cards.css.map */
