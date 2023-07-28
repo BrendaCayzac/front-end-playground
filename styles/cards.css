@@ -54,6 +54,7 @@ main {
   /* Card one */
   /* Card two */
   /* Card Three */
+  /* Card Four */
 }
 main section {
   width: 100%;
@@ -172,7 +173,7 @@ main .card-two figure figcaption a {
   padding: 10px;
   transition: all 0.35s;
 }
-main .card-two figure figcaption a:hover svg {
+main .card-two figure figcaption a:hover svg, main .card-two figure figcaption a:focus svg {
   transform: translateX(4px);
 }
 main .card-two figure figcaption a svg {
@@ -192,14 +193,14 @@ main .card-two figure img {
   transform: scale(1.2);
   transition: 0.35s 0.35s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
 }
-main .card-two figure:hover figcaption {
+main .card-two figure:hover figcaption, main .card-two figure:focus figcaption {
   background-color: #202020;
   bottom: 100%;
   transform: translateY(100%);
   padding: 50px 60px;
   transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
 }
-main .card-two figure:hover a {
+main .card-two figure:hover a, main .card-two figure:focus a {
   opacity: 1;
   transform: translate(-50%, 0);
   transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
@@ -266,6 +267,113 @@ main .card-three .category-card button {
 main .card-three .category-card button:hover, main .card-three .category-card button:focus {
   background-color: #6874E8;
   color: #EEEEEE;
+}
+main .card-four {
+  width: 100%;
+}
+main .card-four .flash-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+  user-select: none;
+  width: 25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1254901961);
+  background: linear-gradient(0deg, rgb(52, 48, 40) 0%, rgba(17, 0, 32, 0.5) 100%);
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5019607843);
+  border-radius: 0.7rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+  transition: 0.3s all;
+}
+main .card-four .flash-card figure {
+  margin: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 10rem;
+  overflow: hidden;
+}
+main .card-four .flash-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .card-four .flash-card h2 {
+  color: #EEEEEE;
+}
+main .card-four .flash-card .description {
+  margin: 0.5rem 0;
+  color: #EEEEEE;
+}
+main .card-four .flash-card .information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+main .card-four .flash-card .information .info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FE6D73;
+  font-weight: 700;
+}
+main .card-four .flash-card .information .duration {
+  display: flex;
+  align-items: center;
+  color: #A6A3AF;
+  margin-right: 0.2rem;
+  gap: 0.5rem;
+}
+main .card-four .flash-card .creator {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  margin-bottom: -0.3rem;
+}
+main .card-four .flash-card .creator ins {
+  color: #A89EC9;
+  text-decoration: none;
+}
+main .card-four .flash-card .creator .wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1333333333);
+  padding: 0.3rem;
+  margin: 0 0 0.5rem 0;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.6666666667);
+}
+main .card-four .flash-card .creator .wrapper img {
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin: 0;
+}
+main .card-four .flash-card ::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px rgba(255, 255, 255, 0.031372549);
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: 0.7s all;
+}
+main .card-four .flash-card:hover, main .card-four .flash-card:focus {
+  border: 1px solid rgba(255, 255, 255, 0.2666666667);
+  box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6666666667);
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+main .card-four .flash-card:hover ::before, main .card-four .flash-card:focus ::before {
+  filter: brightness(0.5);
+  top: -100%;
+  left: 200%;
 }
 
 /*# sourceMappingURL=cards.css.map */
