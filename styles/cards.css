@@ -684,7 +684,7 @@ main .card-eight .card-number:hover .hoverable {
 main .card-eight .card-number:hover .hoverable h2 {
   font-size: 2rem;
 }
-main .card-ninth .border {
+main .card-nine .border {
   height: 25rem;
   width: 25rem;
   background: transparent;
@@ -692,10 +692,10 @@ main .card-ninth .border {
   transition: border 1s;
   position: relative;
 }
-main .card-ninth .border:hover {
+main .card-nine .border:hover {
   border: 1px solid #EEEEEE;
 }
-main .card-ninth .card-socials {
+main .card-nine .card-socials {
   height: 25rem;
   width: 25rem;
   background: #6874E8;
@@ -711,7 +711,7 @@ main .card-ninth .card-socials {
   background: url("https://picsum.photos/600/800") center center no-repeat;
   background-size: 25rem;
 }
-main .card-ninth .card-socials:after {
+main .card-nine .card-socials:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -722,7 +722,7 @@ main .card-ninth .card-socials:after {
   opacity: 0;
   z-index: 1;
 }
-main .card-ninth .card-socials h2 {
+main .card-nine .card-socials h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #EEEEEE;
   font-size: 2.5rem;
@@ -734,11 +734,11 @@ main .card-ninth .card-socials h2 {
   left: 0;
   z-index: 2;
 }
-main .card-ninth .card-socials .fa-brands {
+main .card-nine .card-socials .fa-brands {
   opacity: 0;
   transition: opacity 1s;
 }
-main .card-ninth .card-socials .icons {
+main .card-nine .card-socials .icons {
   position: absolute;
   z-index: 2;
   fill: #EEEEEE;
@@ -751,17 +751,17 @@ main .card-ninth .card-socials .icons {
   align-items: center;
   justify-content: space-around;
 }
-main .card-ninth .card-socials:hover {
+main .card-nine .card-socials:hover {
   background: url("https://picsum.photos/600/800") left center no-repeat;
   background-size: 50rem;
 }
-main .card-ninth .card-socials:hover:after {
+main .card-nine .card-socials:hover:after {
   opacity: 0.5;
 }
-main .card-ninth .card-socials:hover h2 {
+main .card-nine .card-socials:hover h2 {
   opacity: 1;
 }
-main .card-ninth .card-socials:hover .fa-brands {
+main .card-nine .card-socials:hover .fa-brands {
   opacity: 1;
 }
 main .card-ten .card-photo {
