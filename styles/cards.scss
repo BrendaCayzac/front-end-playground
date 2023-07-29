@@ -626,6 +626,7 @@ main {
 			margin: 10px 0;
 			transition: ease all $transition-time;
 			perspective: 75rem;
+
 			.content {
 				position: absolute;
 				height: 100%;
@@ -663,7 +664,6 @@ main {
 					transition: ease all 1.3s;
 					background: rgba(0, 0, 0, .4);
 				}
-
 
 				h1 {
 					font-weight: 600;
@@ -781,7 +781,6 @@ main {
 				box-sizing: border-box;
 				padding: 20px;
 
-
 				h2 {
 					color: $white;
 					text-transform: uppercase;
@@ -802,7 +801,7 @@ main {
 				background-image: linear-gradient(
 						40deg,
 						$yellow 0%,
-						$red  45%,
+						$red 45%,
 						$blue 100%
 				);
 				border-radius: 15px;
@@ -825,6 +824,102 @@ main {
 					font-size: 2rem;
 				}
 			}
+		}
+
+	}
+
+	/* Card Ninth */
+	.card-ninth {
+		.border {
+			height: 25rem;
+			width: 25rem;
+			background: transparent;
+			border-radius: 0.75rem;
+			transition: border 1s;
+			position: relative;
+
+			&:hover {
+				border: 1px solid $white;
+			}
+		}
+
+		.card-socials {
+			height: 25rem;
+			width: 25rem;
+			background: $blue;
+			border-radius: 10px;
+			transition: background 0.8s;
+			overflow: hidden;
+			background: $black;
+			box-shadow: 0 70px 63px -60px $black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background: url("https://picsum.photos/600/800") center center no-repeat;
+			background-size: 25rem;
+
+			&:after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $black;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: 1;
+			}
+
+			h2 {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: $white;
+				font-size: 2.5rem;
+				margin: 2rem;
+				opacity: 0;
+				transition: opacity 1s;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
+			.fa-brands {
+				opacity: 0;
+				transition: opacity 1s;
+			}
+
+			.icons {
+				position: absolute;
+				z-index: 2;
+				fill: $white;
+				color: $white;
+				height: 130px;
+				top: 226px;
+				width: 50px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+			}
+
+			&:hover {
+				background: url("https://picsum.photos/600/800") left center no-repeat;
+				background-size: 50rem;
+
+				&:after{
+					opacity: 0.50;
+				}
+
+				h2 {
+					opacity: 1;
+				}
+
+				.fa-brands {
+					opacity: 1;
+				}
+			}
+
 		}
 
 	}
