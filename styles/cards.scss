@@ -1,6 +1,6 @@
 @import "custom";
 
-body{
+body {
 	background-color: $black;
 	font-family: $font;
 }
@@ -455,10 +455,11 @@ main {
 
 	}
 
-	/* Card five */
+	/* Card Five */
 	.card-five {
 		line-height: 1.5;
-		.card{
+
+		.card {
 			display: flex;
 			flex-direction: column;
 			padding: 1rem;
@@ -509,7 +510,7 @@ main {
 					}
 
 					&::-webkit-scrollbar-track {
-						box-shadow: 0;
+						box-shadow: unset;
 						border-radius: 0;
 					}
 
@@ -568,5 +569,50 @@ main {
 
 	}
 
+	/* Card Siz*/
+	.card-six{
+		.card {
+			border-radius: 1rem;
+			filter: drop-shadow(0 5px 10px 0 $white);
+			width: 25rem;
+			height: 25rem;
+			background-color: $white;
+			padding: 1.5rem;
+			position: relative;
+			z-index: 0;
+			overflow: hidden;
+			transition: 0.3s ease-in;
 
+			p{
+				padding: 1rem 0;
+				margin: 0;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: -1rem;
+				right: -1rem;
+				background: $blue;
+				height:27rem;
+				width: 1.5rem;
+				border-radius: 32rem;
+				transform: scale(1);
+				transform-origin: 50% 50%;
+				transition: transform 0.3s ease-out;
+			}
+
+
+			&:hover{
+				color: $white;
+				&::before{
+					transition-delay:0.2s ;
+
+					transform: scale(40);
+				}
+			}
+		}
+
+	}
 }
