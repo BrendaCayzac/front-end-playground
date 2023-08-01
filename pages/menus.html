@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet"
+	      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- Custom-->
+	<link rel="stylesheet" href="../styles/menus.css">
+	<title>Menus</title>
+<body>
+
+<Header>
+	<nav>
+		<a role="button" href="../index.html"> Go back</a>
+		<h1>Menus</h1>
+	</nav>
+	<p>You can check different menus and view them in mobile and desktop
+	   version.</p>
+</Header>
+<main>
+	<section class="menu-one">
+			<div class="mobile">
+				<button class="open-nav-one burger-one">
+					<span class="burger"></span>
+				</button>
+				<nav class="nav-one">
+					<ul>
+						<li>
+							<a href="https://codepen.io/BrendaCayzac/pen/BaGvEaE">Codepen</a>
+						</li>
+						<li>
+							<a href="#">Sample link 1</a>
+						</li>
+						<li>
+							<a href="#">Sample link 2</a>
+						</li>
+						<li>
+							<a href="#">Sample link 3</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<span class="message">Check the codepen link for the
+				                      code!</span>
+			</div>
+			
+			<div class="desktop">
+				<button class="open-nav-one burger-one">
+					<span class="burger"></span>
+				</button>
+				<nav class="nav-one">
+					<ul>
+						<li>
+							<a href="https://codepen.io/BrendaCayzac/pen/BaGvEaE">Codepen</a>
+						</li>
+						<li>
+							<a href="#">Sample link 1</a>
+						</li>
+						<li>
+							<a href="#">Sample link 2</a>
+						</li>
+						<li>
+							<a href="#">Sample link 3</a>
+						</li>
+					</ul>
+				</nav>
+				<span class="message">Check the codepen link for the
+				                      code!</span>
+			</div>
+	</section>
+</main>
+
+<script>
+	/* Menu 1 */
+	const burger = document.querySelector(".burger-one");
+	const nav = document.querySelector(".nav-one");
+	
+	burger.addEventListener("click", function (e){
+		this.classList.toggle("is-open");
+		nav.classList.toggle("is-open");
+	});
+
+</script>
+
+</body>
+</html>
